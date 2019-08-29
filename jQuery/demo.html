@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="jQuery.1.0.1.js"></script>
+    <script>
+      // console.log($())
+      // 给任意对象扩展
+      // var obj = $.extend({}, {name: 'max', age: '30'});
+      // console.log(obj)
+
+      var ret = {name: 'max', list: {age: '30'}};
+      var res = {list: {sex: '女'}};
+      var obj = $.extend(true, {}, ret, res)
+      console.log(obj)
+
+      // // jQuery 本身扩展
+      // $.extend({  // this是jQuery
+      //   work: function () {}
+      // })
+      // jQuery.work()
+
+      // // 实例对象扩展
+      // $.fn.extend({ // this是jQuery实例对象
+      //   sex: '男'
+      // })
+      // $().sex;
+    </script>
+</body>
+</html>
