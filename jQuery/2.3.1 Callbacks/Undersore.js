@@ -26,7 +26,7 @@
         length = list.length
         for(; index < length; index++) {
           // list[index]是一个函数
-          if (list[index](data[0], data[1]) === false && options.stopOnFalse) {
+          if (list[index].apply(data[0], data[1]) === false && options.stopOnFalse) {
             break;
           }
         }
